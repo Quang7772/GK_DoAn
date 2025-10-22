@@ -7,30 +7,21 @@ const Layout = () => {
     <div className="layout">
       {/* ===== HEADER ===== */}
       <header className="header">
-        {/* Banner */}
         <div className="banner">
           {/* Menu trái */}
-          <nav id="menutrai" className="menutrai">
-            <ul>
+          <nav className="nav-left">
+            <ul className="nav-list">
               <li>
-                <Link className="menutrai" to="/">
-                  TRANG CHỦ
-                </Link>
+                <Link to="/">TRANG CHỦ</Link>
               </li>
               <li>
-                <Link className="menutrai" to="/trang1">
-                  EGOV
-                </Link>
+                <Link to="/trang1">EGOV</Link>
               </li>
               <li>
-                <Link className="menutrai" to="/trang2">
-                  SINH VIÊN
-                </Link>
+                <Link to="/trang2">SINH VIÊN</Link>
               </li>
               <li>
-                <Link className="menutrai" to="/listsanpham">
-                  SẢN PHẨM
-                </Link>
+                <Link to="/listsanpham">SẢN PHẨM</Link>
               </li>
             </ul>
           </nav>
@@ -42,7 +33,7 @@ const Layout = () => {
             </Link>
           </div>
 
-          {/* Ô tìm kiếm bên phải */}
+          {/* Tìm kiếm phải */}
           <div className="search-box">
             <input type="text" placeholder="Tìm kiếm..." />
             <button>Tìm</button>
@@ -51,7 +42,7 @@ const Layout = () => {
 
         {/* Thanh đỏ bên dưới */}
         <div className="menubar">
-          ƯU ĐÃI ĐẶC BIỆT - CHÀO MỪNG SINH VIÊN MỚI 2025
+          🎉 ƯU ĐÃI ĐẶC BIỆT - CHÀO MỪNG SINH VIÊN MỚI 2025 🎉
         </div>
       </header>
 
@@ -62,7 +53,40 @@ const Layout = () => {
 
       {/* ===== FOOTER ===== */}
       <footer className="footer">
-        © 2025 - Trường Đại học QDH. All rights reserved.
+        <div className="footer-container">
+          <div className="footer-section">
+            <h4>Liên hệ</h4>
+            <p>Địa chỉ: 123 Đường ABC, TP. XYZ</p>
+            <p>Email: lienhe@qdh.edu.vn</p>
+            <p>Điện thoại: (0123) 456 789</p>
+          </div>
+          <div className="footer-section">
+            <h4>Liên kết nhanh</h4>
+            <ul>
+              <li>
+                <Link to="/">Trang chủ</Link>
+              </li>
+              <li>
+                <Link to="/trang1">Egov</Link>
+              </li>
+              <li>
+                <Link to="/trang2">Sinh viên</Link>
+              </li>
+              <li>
+                <Link to="/listsanpham">Sản phẩm</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="footer-section">
+            <h4>Bản đồ</h4>
+            <div className="map-placeholder">
+              [Bản đồ trường - có thể tích hợp Google Maps sau]
+            </div>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          © 2025 - Trường Đại học QDH. All rights reserved.
+        </div>
       </footer>
     </div>
   );
